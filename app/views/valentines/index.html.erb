@@ -1,4 +1,4 @@
-<table>
+<table class="table">
 
   <colgroup>
     <col class="col-xs-2">
@@ -17,6 +17,7 @@
     <tr>
       <td><%= valentine.name %></td>
       <td><%= valentine.message %></td>
+      <td><%= link_to 'Delete', valentine_path(valentine), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>

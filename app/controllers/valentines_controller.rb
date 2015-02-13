@@ -17,6 +17,11 @@ class ValentinesController < ApplicationController
       end
   end
 
+  def destroy
+    @valentine.destroy
+      redirect_to valentines_path, notice: 'User was successfully deleted.'
+  end
+
   private
 
   def set_valentine
