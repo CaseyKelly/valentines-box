@@ -1,13 +1,23 @@
-<!-- <div class="page-header">
-  <h1></h1>
-</div> -->
+<table class="table table-striped">
 
-<div class="jumbotron">
-  <h1>Hey, it's Valentines Day</h1>
-  <p></p>
-  <p></p>
-</div>
+  <colgroup>
+    <col class="col-xs-2">
+    <col class="col-xs-7">
+  </colgroup>
 
-<button type="button" class="btn btn-info btn-lg">
-  <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Send Casey a Valentine <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-</button>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Valentine</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @valentines.each do |valentine| %>
+    <tr>
+      <td><%= valentine.name %></td>
+      <td><%= valentine.message %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

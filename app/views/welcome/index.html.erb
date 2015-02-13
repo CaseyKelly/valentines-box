@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1>Hey, it's Valentines Day</h1>
+  <br><br>
+  <p>You should send Casey a valentine to let him know how you really feel.</p>
+  <p></p>
+</div>
+
+<%= form_for @valentine do |f| %>
+
+  <p><%= f.label :name %>
+  <%= f.text_field :name %></p>
+
+  <p><%= f.label :message %>
+    <%= f.text_field :message %></p>
+
+  <p><%= f.submit 'Send Casey a Valentine', class: "btn btn-info btn-lg" %></p>
+
+
+<!-- <button type="button" class="btn btn-info btn-lg">
+  <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Send Casey a Valentine <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+</button> -->
+
+<% end %>

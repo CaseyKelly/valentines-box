@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'valentines#index'
+  resources :valentines
+  
+  root 'welcome#index'
 end
