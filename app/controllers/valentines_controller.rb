@@ -1,5 +1,6 @@
 class ValentinesController < ApplicationController
   before_action :set_valentine, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize, only: [:destroy]
 
   def index
     @valentines = Valentine.all
@@ -19,7 +20,7 @@ class ValentinesController < ApplicationController
 
   def destroy
     @valentine.destroy
-      redirect_to valentines_path, notice: 'User was successfully deleted.'
+      redirect_to valentines_path, notice: 'Valentine was successfully deleted.'
   end
 
   private
